@@ -14,9 +14,9 @@ class LoginPageLocators:
 class ProductPageLocators:
     ADD_TO_BASKET_BUTTON = (By.XPATH, "//div[@id='content_inner']//button[text()='Add to basket']")
 
-    BOOK_NAME = (By.XPATH, "//div[@id='content_inner']//h1[contains(text(), 'The shellcoder')]")
+    BOOK_NAME = (By.XPATH, "//div[@class='col-sm-6 product_main']//h1")
 
-    ADDED_TO_BASKET_MESSAGE = (By.XPATH, "//div[@id='messages']//div[@class='alert alert-safe alert-noicon alert-success  fade in'][1]")
+    ADDED_NAME_BASKET_MESSAGE = (By.XPATH, "//div[@id='messages']//div[@class='alert alert-safe alert-noicon alert-success  fade in'][1]//strong")
 
     BOOK_PRICE_PRODUCT_PAGE = (By.XPATH, "//p[@class='price_color']")
 
