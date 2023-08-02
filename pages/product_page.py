@@ -31,3 +31,4 @@ class ProductPage(BasePage):
 
         return True
 
+

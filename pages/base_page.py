@@ -26,6 +26,9 @@ class BasePage:
     def open(self):
         self.browser.get(self.url)
 
+    def click(self, how, what):
+        self.browser.find_element(how, what).click()
+
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
@@ -67,4 +70,8 @@ class BasePage:
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                         " probably unauthorised user"
 
